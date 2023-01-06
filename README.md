@@ -35,6 +35,10 @@ My Flutter exercise project.
     </tr>
 </table>
 
+## Recorded Demo
+
+https://youtube.com/shorts/pq5KyOm9F3A
+
 ## APK
 
 https://drive.google.com/file/d/14ffabKZl-B9PyhzFsygGJfJAX9ivk8Di
