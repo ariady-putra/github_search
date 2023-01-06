@@ -21,16 +21,16 @@ My Flutter exercise project.
     </tr>
     <tr>
         <td>
-            <img src="screenshots/light theme/ios_phone_iphone-13_1672977137131.png">
+            <img src="screenshots/dark theme/ios_phone_iphone-13_1672977137131.png">
         </td>
         <td>
-            <img src="screenshots/light theme/ios_phone_iphone-13_1672977223102.png">
+            <img src="screenshots/dark theme/ios_phone_iphone-13_1672977223102.png">
         </td>
         <td>
-            <img src="screenshots/light theme/ios_phone_iphone-13_1672977247072.png">
+            <img src="screenshots/dark theme/ios_phone_iphone-13_1672977247072.png">
         </td>
         <td>
-            <img src="screenshots/light theme/ios_phone_iphone-13_1672977303816.png">
+            <img src="screenshots/dark theme/ios_phone_iphone-13_1672977303816.png">
         </td>
     </tr>
 </table>
