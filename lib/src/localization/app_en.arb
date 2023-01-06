@@ -1,0 +1,35 @@
+{
+  "appTitle": "Github Search",
+  
+  "username": "Username",
+  "issuesTitle": "Issues Title",
+  "repoTitle": "Repo Title",
+  
+  "user": "User",
+  "issues": "Issues",
+  "repositories": "Repositories",
+  
+  "watchers": "watchers",
+  "stars": "stars",
+  "forks": "forks",
+  
+  "lazyLoading": "Lazy Loading",
+  "withIndex": "With Index",
+  
+  "enterSearchTerm": "Enter a search term",
+  "pleaseEnterSearchTermToBegin": "Please enter a search term to begin",
+  "pleaseEnterAnotherSearchTerm": "Please enter another search term",
+  "anUnspecifiedErrorHasOccured": "An unspecified error has occured",
+  "noSearchResult": "No search result",
+  
+  "settings": "Settings",
+  "systemTheme": "System Theme",
+  "lightTheme": "Light Theme",
+  "darkTheme": "Dark Theme",
+  
+  "quit": "Quit",
+  
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}

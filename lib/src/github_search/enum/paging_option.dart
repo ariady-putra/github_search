@@ -1,0 +1,4 @@
+enum PagingOption {
+  lazyLoading,
+  withIndex,
+}
