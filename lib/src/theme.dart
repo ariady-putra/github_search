@@ -11,10 +11,12 @@ class AppTheme {
       backgroundColor: AppColor.darkShade,
     ),
     cardColor: AppColor.darkShade,
+    disabledColor: Colors.grey[400],
     hintColor: AppColor.darkShade,
     indicatorColor: AppColor.lightShade,
     primaryColorDark: AppColor.darkShade,
     primaryColorLight: AppColor.lightShade,
+    secondaryHeaderColor: Colors.grey[700],
     toggleableActiveColor: AppColor.lightShade,
     unselectedWidgetColor: Colors.white.withOpacity(.75),
   );
@@ -28,10 +30,12 @@ class AppTheme {
 
   static final ThemeData _baseDark =
       ThemeData.dark(useMaterial3: true).copyWith(
+    disabledColor: Colors.white10,
     // hintColor: AppColor.lightShade.withOpacity(.5),
     indicatorColor: AppColor.lightShade,
     primaryColorDark: AppColor.lightShade,
     primaryColorLight: AppColor.lightShade,
+    secondaryHeaderColor: Colors.white70,
     toggleableActiveColor: AppColor.lightShade,
     // unselectedWidgetColor: AppColor.lightShade,
   );
