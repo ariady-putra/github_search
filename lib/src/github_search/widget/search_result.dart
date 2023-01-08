@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -243,22 +244,7 @@ class _SearchResultAreaState extends State<SearchResultArea> {
 
     _topSpacerFlex = widget.topSpacerFlex;
     _bottomSpacerFlex = widget.bottomSpacerFlex;
-
-    _containerOpacity = widget.initOpacity;
-    Future.delayed(
-      const Duration(seconds: 1),
-    ).whenComplete(
-      () {
-        try {
-          setState(
-            () => _containerOpacity = 1,
-          );
-        } catch (_) {}
-      },
-    );
   }
-
-  double _containerOpacity = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -271,9 +257,8 @@ class _SearchResultAreaState extends State<SearchResultArea> {
             if (_topSpacerFlex > 0) Spacer(flex: _topSpacerFlex),
 
             // Content area
-            AnimatedOpacity(
-              opacity: _containerOpacity,
-              duration: const Duration(seconds: 1),
+            FadeIn(
+              delay: const Duration(seconds: 1),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
