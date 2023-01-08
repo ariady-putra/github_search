@@ -25,6 +25,7 @@ class AppTheme {
       primary: AppColor.darkShade,
       secondary: AppColor.darkShade,
       tertiary: AppColor.darkShade,
+      inversePrimary: AppColor.lightShade,
     ),
   );
 
@@ -44,6 +45,7 @@ class AppTheme {
       primary: AppColor.lightShade,
       secondary: AppColor.lightShade,
       tertiary: AppColor.lightShade,
+      inversePrimary: AppColor.darkShade,
     ),
   );
 }
