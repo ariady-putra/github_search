@@ -1,4 +1,3 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -155,7 +154,7 @@ class SearchLoading extends BaseSearchResultArea {
   @override
   Widget build(BuildContext context) {
     return SearchResultArea(
-      initOpacity: 1,
+      fadeDurationSec: 0,
       height: _calcSearchResultAreaHeight(
         parentContext: parentContext,
         pinnedWidgetCount: pinnedWidgetCount,
@@ -181,6 +180,7 @@ class SearchEmpty extends BaseSearchResultArea {
   @override
   Widget build(BuildContext context) {
     return SearchResultArea(
+      fadeDelaySec: 1,
       height: _calcSearchResultAreaHeight(
         parentContext: parentContext,
         pinnedWidgetCount: pinnedWidgetCount,
@@ -219,14 +219,16 @@ class SearchResultArea extends StatefulWidget {
   final double height;
   final int topSpacerFlex;
   final int bottomSpacerFlex;
-  final double initOpacity;
+  final int? fadeDelaySec;
+  final int? fadeDurationSec;
 
   const SearchResultArea({
     required this.height,
     required this.children,
     this.topSpacerFlex = 1,
     this.bottomSpacerFlex = 2,
-    this.initOpacity = 0,
+    this.fadeDelaySec,
+    this.fadeDurationSec,
     super.key,
   });
 
@@ -258,6 +260,8 @@ class _SearchResultAreaState extends State<SearchResultArea> {
 
             // Content area
             FadeInRoundedRect(
+              fadeDelaySec: widget.fadeDelaySec ?? 0,
+              fadeDurationSec: widget.fadeDurationSec ?? 1,
               child: Column(
                 children: widget.children,
               ),

@@ -6,6 +6,7 @@ class FadeInRoundedRect extends StatelessWidget {
   final Color? color;
   final double borderRadius;
   final double padding;
+  final int fadeDelaySec;
   final int fadeDurationSec;
 
   const FadeInRoundedRect({
@@ -13,6 +14,7 @@ class FadeInRoundedRect extends StatelessWidget {
     this.color,
     this.borderRadius = 16,
     this.padding = 20,
+    this.fadeDelaySec = 0,
     this.fadeDurationSec = 1,
     super.key,
   });
@@ -20,6 +22,7 @@ class FadeInRoundedRect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeIn(
+      delay: Duration(seconds: fadeDelaySec),
       duration: Duration(seconds: fadeDurationSec),
       child: Container(
         padding: EdgeInsets.all(padding),

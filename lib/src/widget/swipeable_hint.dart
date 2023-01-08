@@ -44,8 +44,8 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
         children: List.generate(
           14,
           (index) => Flash(
-            delay: Duration(milliseconds: (index + 1) * 1000 ~/ 14),
-            duration: const Duration(seconds: 1),
+            delay: Duration(milliseconds: (index + 1) * 2000 ~/ 14),
+            duration: const Duration(seconds: 2),
             infinite: true,
             child: Text(
               '>',
@@ -94,6 +94,7 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
             duration: const Duration(milliseconds: 500),
             child: Center(
               child: FadeInRoundedRect(
+                fadeDelaySec: 1,
                 color: Theme.of(context).colorScheme.inversePrimary,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
