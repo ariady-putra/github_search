@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../util/utils.dart';
+import 'fadein_roundedrect.dart';
 
 const String swipeablePageHintKey = 'swipeable_page_hint';
-const Duration oneSec = Duration(seconds: 1);
 
 class SwipeablePageHint extends StatefulWidget {
   const SwipeablePageHint({super.key});
@@ -29,7 +29,7 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
 
   Widget _animatedRightArrow() {
     return Container(
-      padding: const EdgeInsets.fromLTRB(7, 0, 7, 1.5),
+      padding: const EdgeInsets.symmetric(horizontal: 7),
       decoration: BoxDecoration(
         border: Border.all(
           color: Theme.of(context).colorScheme.primary.withOpacity(.5),
@@ -42,15 +42,16 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: List.generate(
-          10,
+          14,
           (index) => Flash(
-            delay: Duration(milliseconds: (index + 1) * 100),
-            duration: oneSec,
+            delay: Duration(milliseconds: (index + 1) * 1000 ~/ 14),
+            duration: const Duration(seconds: 1),
             infinite: true,
             child: Text(
               '>',
               style: TextStyle(
                 color: Theme.of(context).colorScheme.primary.withOpacity(.75),
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -92,23 +93,16 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
             animate: _dismissed,
             duration: const Duration(milliseconds: 500),
             child: Center(
-              child: FadeIn(
-                duration: oneSec,
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      _animatedRightArrow(),
-                      _hintText(),
-                      _dismissButton(),
-                    ],
-                  ),
+              child: FadeInRoundedRect(
+                color: Theme.of(context).colorScheme.inversePrimary,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _animatedRightArrow(),
+                    _hintText(),
+                    _dismissButton(),
+                  ],
                 ),
               ),
             ),

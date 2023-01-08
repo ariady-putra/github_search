@@ -257,17 +257,9 @@ class _SearchResultAreaState extends State<SearchResultArea> {
             if (_topSpacerFlex > 0) Spacer(flex: _topSpacerFlex),
 
             // Content area
-            FadeIn(
-              duration: oneSec,
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.white.withOpacity(.25),
-                ),
-                child: Column(
-                  children: widget.children,
-                ),
+            FadeInRoundedRect(
+              child: Column(
+                children: widget.children,
               ),
             ),
 
