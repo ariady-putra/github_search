@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../util/utils.dart';
 
 const String swipeablePageHintKey = 'swipeable_page_hint';
+const Duration oneSec = Duration(seconds: 1);
 
 class SwipeablePageHint extends StatefulWidget {
   const SwipeablePageHint({super.key});
@@ -43,7 +44,8 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
         children: List.generate(
           10,
           (index) => Flash(
-            delay: Duration(milliseconds: index * 100),
+            delay: Duration(milliseconds: (index + 1) * 100),
+            duration: oneSec,
             infinite: true,
             child: Text(
               '>',
@@ -88,9 +90,10 @@ class _SwipeablePageHintState extends State<SwipeablePageHint> {
     return _showHint ?? true
         ? FadeOutUp(
             animate: _dismissed,
+            duration: const Duration(milliseconds: 500),
             child: Center(
               child: FadeIn(
-                delay: const Duration(seconds: 1),
+                duration: oneSec,
                 child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(

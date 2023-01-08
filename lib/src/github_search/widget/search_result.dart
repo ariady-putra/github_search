@@ -258,7 +258,7 @@ class _SearchResultAreaState extends State<SearchResultArea> {
 
             // Content area
             FadeIn(
-              delay: const Duration(seconds: 1),
+              duration: oneSec,
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
