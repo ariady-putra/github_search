@@ -27,6 +27,9 @@
   "lightTheme": "Light Theme",
   "darkTheme": "Dark Theme",
   
+  "swipeablePageHint": "Swipe right to go back",
+  
+  "dismiss": "dismiss",
   "quit": "Quit",
   
   "@appTitle": {
