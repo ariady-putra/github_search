@@ -21,7 +21,7 @@ class AppTheme {
     unselectedWidgetColor: Colors.white.withOpacity(.75),
   );
   static ThemeData light = _baseLight.copyWith(
-    colorScheme: _baseDark.colorScheme.copyWith(
+    colorScheme: _baseLight.colorScheme.copyWith(
       primary: AppColor.darkShade,
       secondary: AppColor.darkShade,
       tertiary: AppColor.darkShade,
