@@ -7,9 +7,16 @@ import '../../settings/settings_view.dart';
 import '../../util/utils.dart';
 import '../../widget/widgets.dart';
 import '../enum/enums.dart';
-import 'search_field.dart';
+import 'search_text.dart';
 
-class SearchBar extends StatelessWidget {
+/*
+The name 'SearchBar' is defined in the libraries
+'package:flutter/src/material/search_anchor.dart
+(via package:flutter/material.dart)' and
+'package:github_search/src/github_search/widget/search_bar.dart
+(via package:github_search/src/github_search/widget/widgets.dart)'.
+*/
+class SearchSpace extends StatelessWidget {
   final double toolbarHeight; // height per toolbar
 
   final TextEditingController searchFieldController;
@@ -22,7 +29,7 @@ class SearchBar extends StatelessWidget {
   final PagingOption currentPagingOptionValue;
   final void Function(PagingOption)? onPagingOptionChanged;
 
-  const SearchBar({
+  const SearchSpace({
     super.key,
 
     // Height per toolbar
@@ -87,7 +94,7 @@ class SearchBar extends StatelessWidget {
         titleSpacing: 0,
         title: SizedBox(
           height: AppPlatform.isDesktop(context) ? null : toolbarHeight,
-          child: SearchField(
+          child: SearchText(
             control: searchFieldController,
             onSearchTextChanged: onSearchTextChanged,
             suffixIconTapAction: onSearchTextCleared,

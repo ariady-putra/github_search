@@ -17,8 +17,53 @@ class AppTheme {
     primaryColorDark: AppColor.darkShade,
     primaryColorLight: AppColor.lightShade,
     secondaryHeaderColor: Colors.grey[700],
-    toggleableActiveColor: AppColor.lightShade,
     unselectedWidgetColor: Colors.white.withOpacity(.75),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+      trackColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
   );
   static ThemeData light = _baseLight.copyWith(
     colorScheme: _baseLight.colorScheme.copyWith(
@@ -37,7 +82,52 @@ class AppTheme {
     primaryColorDark: AppColor.lightShade,
     primaryColorLight: AppColor.lightShade,
     secondaryHeaderColor: Colors.white70,
-    toggleableActiveColor: AppColor.lightShade,
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+      trackColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return null;
+        }
+        if (states.contains(MaterialState.selected)) {
+          return AppColor.lightShade;
+        }
+        return null;
+      }),
+    ),
     // unselectedWidgetColor: AppColor.lightShade,
   );
   static ThemeData dark = _baseDark.copyWith(

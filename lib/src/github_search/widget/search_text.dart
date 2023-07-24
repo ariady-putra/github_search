@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../theme.dart';
 import '../../util/utils.dart';
 
-class SearchField extends StatelessWidget {
+class SearchText extends StatelessWidget {
   final TextEditingController control;
   final String? hintText;
   final Color? fillColor;
@@ -14,7 +14,7 @@ class SearchField extends StatelessWidget {
   final void Function()? suffixIconTapAction;
   final void Function(String)? onSearchTextChanged;
 
-  const SearchField({
+  const SearchText({
     required this.control,
     this.hintText,
     this.fillColor,

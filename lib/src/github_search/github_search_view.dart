@@ -161,7 +161,7 @@ class GithubSearchPageViewState extends State<GithubSearchPageView> {
     return CustomScrollView(
       slivers: [
         // App bar
-        SearchBar(
+        SearchSpace(
           // Height per toolbar
           toolbarHeight: toolbarHeight,
           /* There are 3 bars:
