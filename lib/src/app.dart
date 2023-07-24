@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
+          // useInheritedMediaQuery: true, // deprecated after v3.7.0-29.0.pre
           builder: DevicePreview.appBuilder,
           home: const GithubSearchPageProvider(),
 
