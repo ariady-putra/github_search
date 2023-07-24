@@ -18,7 +18,7 @@ dependencies:
   flutter_svg: ^1.1.6
 
   animate_do: ^3.0.2
-  black_hole_flutter: ^0.3.5
+  black_hole_flutter: ^1.0.1
   cached_network_image: ^3.2.3
   device_preview_screenshot: ^1.0.0
   device_preview: ^1.1.0
@@ -31,7 +31,7 @@ dependencies:
   path: ^1.8.3
   shared_preferences: ^2.0.15
   stream_transform: ^2.1.0
-  swipeable_page_route: ^0.2.6
+  swipeable_page_route: ^0.4.0
   universal_platform: ^1.0.0+1
   url_launcher: ^6.1.7
 
