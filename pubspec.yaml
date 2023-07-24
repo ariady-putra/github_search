@@ -28,6 +28,7 @@ dependencies:
   json_annotation: ^4.7.0
   liquid_pull_to_refresh: ^3.0.1
   pager: ^0.0.5
+  path: ^1.8.3
   shared_preferences: ^2.0.15
   stream_transform: ^2.1.0
   swipeable_page_route: ^0.2.6
